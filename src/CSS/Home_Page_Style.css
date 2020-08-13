@@ -133,3 +133,19 @@ a {
     width: 25%;
     border: 1px solid #000;
 }
+
+.tb01 {
+  position:absolute;
+           top:50%;
+           left:50%;
+}
+
+table {
+    border: 2px solid rgb(200, 200, 200);
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    position:absolute;
+           top:60%;
+           left:40%;
+}
