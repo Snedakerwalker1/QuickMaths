@@ -19,6 +19,7 @@ body, html {
   font-size: 17px;
   width: 25%;
   text-align: center;
+
 }
 
 .tablink:hover {
@@ -108,14 +109,27 @@ body, html {
 }
 
 .results{
-  .padding-right: 25%;
-  .padding-left: 25%;
-  .padding-top: 10px;
-  .padding-bottom: 0.25in;
+  padding-right: 25%;
+  padding-left: 25%;
+  padding-top: 10px;
+  padding-bottom: 0.25in;
   text-align: center;
   font-size: 25px;
 
 }
 
+.division{
+  padding-right: 45%;    
+  padding-left: 45%;
+  font-size: 40px;
+  text-align: center;
+}
+
 .button1 {background-color: #D68910}
 .button12 {background-color: #D68910}
+
+a {
+    display: block;
+    width: 25%;
+    border: 1px solid #000;
+}

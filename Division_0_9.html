@@ -2,91 +2,69 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>QuickMaths | Home</title>
+<title>QuickMaths | Division 0-9</title>
 
 <!---<link rel="stylesheet" href="css/style.css">-->
 <link rel = "stylesheet"
    type = "text/css"
    href = "src/CSS/Home_Page_Style.css" />
 </head>
+
 <body>
 
-<STYLE>A {text-decoration: none;
-          width: 40%;
+<STYLE>A {text-decoration: none;} </STYLE>
+<button class="tablink" id="HomeTab" onclick="returnInterupt()">QuickMaths Home</button>
 
-  } </STYLE>
+<button class="tablink" onclick="testOpenPage('test1')" id="defaultOpen">Test</button>
 
-<button class="tablink" onclick="openPage('QuickMaths', this, '#EBF5FB')" id="defaultOpen">QuickMaths Home</button>
-<button class="tablink" onclick="openPage('Guest', this, '#EAFAF1')" >Guest</button>
-<button class="tablink" onclick="openPage('Sign', this, '#FDEDEC')">Sign Up</button>
-<button class="tablink" onclick="openPage('Log', this, '#FBEEE6')">Log In</button>
-
-<div id="QuickMaths" class="tabcontent">
-  <h3>Info</h3>
-  <p>Welcome to QuickMaths the home of online mathematics Practice and Testing.
-  <br> QuickMaths is a digital classroom tool designed for both teachers and students to help the students master their multiplication and division facts, while giving teachers a powerfull timed testing method, and giving both teachers and students in depth student results. 
-  </p>
-  <p>
-  QuickMaths all began in the fall of 2020 when the California Elementary School Teacher Mrs. Quick wanted a way to continue giving her 70 question timed Multiplication and Division facts test to her 5th grade students, but couldn’t find a suitable online method to give out said test. And so, with her input, Quickmaths was created to fill this need for an online, timed test service as well as a practice service for students. 
-  </p>
-  <!--
-  <p>
-  QuickMaths provides all of its current features free of charge as a hope to give students acces to 
-  </p>
-  -->
-  <p>
-  As of now, QuickMaths has 3 different built in multiplication and division testing options: the Multiplication 0-9s Test, Division 1-9s test, and the combined Multiplication and Division 0-9s test.
-  </p>
-  <p>
-  Give any of these built in tests a whirl right now by clicking here. 
-  </p>
+<div id="test1" class="tabcontent">
   <div class="wrapper">
-    <button class="button button1" onclick="openPage('Guest', this, '#EAFAF1')" >Try Tests</button>
+    <h3>Division 0-9 Test</h3>
+  </div>
+  <p>To begin the test first input how much time, in minutes, you want to give yourself for the test, or click the no time limit button. 
+    The standard amount of time in person would be 3 minutes, but feel free to pick any time! </p>
+  <div class="wrapper">
+    <form name="testTimeForm" id="testTimeForm" onsubmit="event.preventDefault(); submit_time('testdiv', 'testTimeForm', 'time1', true);">
+      Time Limit: <input type="number" min="1" max="30" step="1" name="time1" value="3"><br><br> 
+    </form> 
+    <button class="button2 button12" onclick="submit_time('testdiv', 'testTimeForm','time1', false)"> No Time Limit </button>
+    <button class="button2 button12" onclick="submit_time('testdiv','testTimeForm', 'time1', true)"> Begin Test</button>
   </div>
 </div>
-
-<div id="Guest" class="tabcontent">
-  <h3>Try Our Tests!</h3>
-  <p>Hello Guest. Feel free to try any, or even all of the test material below. Just click on the test of your choice, input the amount of time limit you want, and try one of our tests, and don't forget to have fun!
+<!-- Once the time is filled out in the start page, the test page here will be activated. -->
+<div id="testdiv" class="tabcontent">
+  <h3>Division 0-9 Test</h3>
+  <p> Enter your answer in the space privided and press enter. If you dont know the answer press Skip.
   </p>
-  <p style="text-align:center;">
-    Just chose a test below and begin!
-  </p>
-  <div class="wrapper">
-    <a class="button button1" href="Multiplication_0_9.html"> Multiplication 0-9 test</a>
-    <!--<button class="button button1" onclick="testOpenPage('test1')"></button> -->
-    <bl/>
-    <p>This is the Multiplication 0-9 test.
-    </p>
-    <bl/>
-    <a class="button button1" href="Division_0_9.html" style="width: 100%;"> Division 0-9 test</a>
-    <bl/>
-    <p>This is the Division 1-9 test.
-    </p>
-    <bl/>
-    <button class="button button1">Multiplication and Division 0-9 test</button>
-    <bl/>
-    <p>This is the Multiplication and Division 0-9 test.
-    </p>
+  <!-- advanceTest(testName, formid, questid, answered = bool if the user skipped the question.) -->
+  <div id="div_0" class="division">  
+    <div>    
+      <form name="div_0" id="div_0_form" onsubmit="event.preventDefault(); advanceTest('testdiv', 'div_0_form', 'div_0_ans', true);">
+        <input type="number" id='div_0_ans' min="0" max="256" step="1" name="div_0_0" ><br>
+        <label for="div_0_ans">
+        <span style="border-right: 1.5px black solid; border-radius: 0px 0px 10px 0px">
+    		6 
+		</span>
+		<span style="border-top: 1.5px black solid; ">
+    		&nbsp;36 
+		</span></label><br>
+        <input type="hidden" id="answer" name="answer" value="6">
+        <input type="hidden" id="x" name="x_val_ind" value="6">
+        <input type="hidden" id="y" name="y_val_ind" value="6">
+      </form>
+    </div>
+      <button class="button3 button12" onclick="advanceTest('testdiv', 'div_0_form', 'div_0_ans', false)">Skip</button>
+      <button class="button3 button12" onclick="advanceTest('testdiv', 'div_0_form', 'div_0_ans', true)">Enter</button>
   </div>
-</div>
 
-<div id="Sign" class="tabcontent">
-  <h3>Sign Up</h3>
-  <!-- Will need better butons, probably with a method to take them to the other sights -->
-  <p>Students and Teachers can sign up here! 
-    <br> This is an upcomming feature !!
-  </p>
-  <!--<button class="tablink" onclick="openPage('Sign', this, 'blue')">Sign Up</button>
-  <button class="tablink" onclick="openPage('Log', this, 'orange')">Log In</button>
-  -->
-</div>
+  <p class='results' id="raw_score"></p>
 
-<div id="Log" class="tabcontent">
-  <h3>Log In</h3>
-  <p>Comming soon you will be able to log in and view your past test progree!!!</p>
-</div>
+  <p class='results' id="percent_score"></p>
 
+  
+  <div id="timer" class="countdownTimer">Time left = <span id="timer"></span></div>
+
+</div>
 <script>
 var in_test = false
 var timer_active = 0
@@ -94,7 +72,7 @@ var question_order = []
 var number_correct = 0
 var value = 0
 
-function openPage(pageName,elmnt,color) {
+/function openPage(pageName,elmnt,color) {
   var result = true
   if (in_test == true) {
     result = confirm("Are you sure you want to exit test, your progress will be lost?")
@@ -118,7 +96,7 @@ function openPage(pageName,elmnt,color) {
     document.getElementById(pageName).style.display = "block";
     elmnt.style.backgroundColor = color;
   }
-}
+}/
 function hideTab(element){
   dogument.getElementById(element).style.display = "none"
 }
@@ -130,7 +108,7 @@ function testOpenPage(pageName) {
   }
   tablinks = document.getElementsByClassName("tablink");
   for (i = 0; i < tablinks.length; i++) {
-    if (tablinks[i].id != "defaultOpen") {
+    if (tablinks[i].id != "HomeTab") {
       tablinks[i].style.display = "none";
     }
   }
@@ -251,6 +229,9 @@ function getNumTestAnswers(testName) {
   if (testName == "testmult") {
     return 'multiplication';
   }
+  if (testName == "testdiv") {
+  	return 'division';
+  }
 }
 
 function startTimer(testName) {
@@ -277,9 +258,31 @@ function checkSecond(sec) {
   return sec;
 }
 
+function returnInterupt() {
+  var result = true
+  if (in_test == true) {
+    result = confirm("Are you sure you want to exit the test, your progress will be lost?");
+    if (result==true) {
+      clearTimeout(timer_active);
+      number_correct = 0;
+      location.href = "index.html";
+    }
+    else {
+      return false;
+    }
+  }
+  else {
+    location.href = "index.html";
+  }
+
+}
+
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 </script>
-   
+
+
+
 </body>
-</html> 
+
+</html>

@@ -44,6 +44,8 @@
         <label for="mul_0_ans">4<br><SPAN STYLE= "text-decoration:underline">&times; 2</SPAN></label><br>
         <input type="number" id='mul_0_ans' min="0" max="256" step="1" name="mul_0_0" ><br><br> 
         <input type="hidden" id="answer" name="answer" value="8">
+        <input type="hidden" id="z" name="z_val_ind" value="4">
+        <input type="hidden" id="w" name="w_val_ind" value="2">
       </form>
     </div>
       <button class="button3 button12" onclick="advanceTest('testmult', 'mul_0_form', 'mul_0_ans', false)">Skip</button>
@@ -56,6 +58,8 @@
         <label for="mul_1_1">5<br><SPAN STYLE= "text-decoration:underline">&times; 2</SPAN></label><br>
         <input type="number" id='mul_1_ans' min="0" max="256" step="1" name="mul_1_1" ><br><br> 
         <input type="hidden" id="answer" name="answer" value="10">
+        <input type="hidden" id="z" name="z_val_ind" value="5">
+        <input type="hidden" id="w" name="w_val_ind" value="2">
       </form>
     </div>
     <button class="button3 button12" onclick="advanceTest('testmult', 'mul_1_form', 'mul_1_ans', false)">Skip</button>
@@ -67,6 +71,8 @@
       <form name="mul_2" id="mul_2_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_2_form', 'mul_2_ans', true);">
         <label for="mul_2_2">7<br><SPAN STYLE= "text-decoration:underline">&times; 3</SPAN></label><br>
         <input type="number" id= 'mul_2_ans' min="0" max="256" step="1" name="mul_2_2" ><br><br> 
+        <input type="hidden" id="z" name="z_val_ind" value="7">
+        <input type="hidden" id="w" name="w_val_ind" value="3">
         <input type="hidden" id="answer" name="answer" value="21">
       </form>
     </div>
@@ -78,7 +84,9 @@
     <div style="padding-right: 20%">    
       <form name="mul_3" id="mul_3_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_3_form', 'mul_3_ans', true);">
         <label for="mul_3_3">2<br><SPAN STYLE= "text-decoration:underline">&times; 6</SPAN></label><br>
-        <input type="number" id="mul_3_ans" min="0" max="256" step="1" name="mul_3_3" ><br><br> 
+        <input type="number" id="mul_3_ans" min="0" max="256" step="1" name="mul_3_3" ><br><br>    
+        <input type="hidden" id="z" name="z_val_ind" value="2">
+        <input type="hidden" id="w" name="w_val_ind" value="6">
         <input type="hidden" id="answer" name="answer" value="12">
       </form>
     </div>
@@ -91,6 +99,8 @@
       <form name="mul_4" id="mul_4_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_4_form', 'mul_4_ans', true);">
         <label for="mul_4_4">6<br><SPAN STYLE= "text-decoration:underline">&times; 2</SPAN></label><br>
         <input type="number" id="mul_4_ans" min="0" max="256" step="1" name="mul_4_4" ><br><br> 
+        <input type="hidden" id="z" name="z_val_ind" value="6">
+        <input type="hidden" id="w" name="w_val_ind" value="2">
         <input type="hidden" id="answer" name="answer" value="12">
       </form>
     </div>
@@ -102,7 +112,9 @@
     <div style="padding-right: 20%">      
       <form name="mul_5" id="mul_5_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_5_form', 'mul_5_ans', true);">
         <label for="mul_5_5">3<br><SPAN STYLE= "text-decoration:underline">&times; 4</SPAN></label><br>
-        <input type="number" id="mul_5_ans" min="0" max="256" step="1" name="mul_5_5" ><br><br> 
+        <input type="number" id="mul_5_ans" min="0" max="256" step="1" name="mul_5_5" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="3">
+        <input type="hidden" id="w" name="w_val_ind" value="4">
         <input type="hidden" id="answer" name="answer" value="12">
       </form>
     </div>
@@ -115,6 +127,8 @@
       <form name="mul_6" id="mul_6_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_6_form', 'mul_6_ans', true);">
         <label for="mul_6_6">7<br><SPAN STYLE= "text-decoration:underline">&times; 9</SPAN></label><br>
         <input type="number" id="mul_6_ans" min="0" max="256" step="1" name="mul_6_6" ><br><br> 
+        <input type="hidden" id="z" name="z_val_ind" value="7">
+        <input type="hidden" id="w" name="w_val_ind" value="9">
         <input type="hidden" id="answer" name="answer" value="63">
       </form>
     </div>
@@ -126,7 +140,9 @@
     <div style="padding-right: 20%">      
       <form name="mul_7" id="mul_7_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_7_form', 'mul_7_ans', true);">
         <label for="mul_7_7">5<br><SPAN STYLE= "text-decoration:underline">&times; 0</SPAN></label><br>
-        <input type="number" id="mul_7_ans" min="0" max="256" step="1" name="mul_7_7" ><br><br> 
+        <input type="number" id="mul_7_ans" min="0" max="256" step="1" name="mul_7_7" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="5">
+        <input type="hidden" id="w" name="w_val_ind" value="0">
         <input type="hidden" id="answer" name="answer" value="0">
       </form>
     </div>
@@ -138,7 +154,9 @@
     <div style="padding-right: 20%">    
       <form name="mul_8" id="mul_8_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_8_form', 'mul_8_ans', true);">
         <label for="mul_8_8">2<br><SPAN STYLE= "text-decoration:underline">&times; 9</SPAN></label><br>
-        <input type="number" id="mul_8_ans" min="0" max="256" step="1" name="mul_8_8" ><br><br> 
+        <input type="number" id="mul_8_ans" min="0" max="256" step="1" name="mul_8_8" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="2">
+        <input type="hidden" id="w" name="w_val_ind" value="9">
         <input type="hidden" id="answer" name="answer" value="18">
       </form>
     </div>
@@ -150,7 +168,9 @@
     <div style="padding-right: 20%">      
       <form name="mul_9" id="mul_9_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_9_form', 'mul_9_ans', true);">
         <label for="mul_9_9">6<br><SPAN STYLE= "text-decoration:underline">&times; 4</SPAN></label><br>
-        <input type="number" id="mul_9_ans" min="0" max="256" step="1" name="mul_9_9" ><br><br> 
+        <input type="number" id="mul_9_ans" min="0" max="256" step="1" name="mul_9_9" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="6">
+        <input type="hidden" id="w" name="w_val_ind" value="4">
         <input type="hidden" id="answer" name="answer" value="24">
       </form>
     </div>
@@ -162,7 +182,9 @@
     <div style="padding-right: 20%">     
       <form name="mul_10" id="mul_10_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_10_form', 'mul_10_ans', true);">
         <label for="mul_10_10">9<br><SPAN STYLE= "text-decoration:underline">&times; 8</SPAN></label><br>
-        <input type="number" id="mul_10_ans" min="0" max="256" step="1" name="mul_10_10" ><br><br> 
+        <input type="number" id="mul_10_ans" min="0" max="256" step="1" name="mul_10_10" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="8">
+        <input type="hidden" id="w" name="w_val_ind" value="9">
         <input type="hidden" id="answer" name="answer" value="72">
       </form>
     </div>
@@ -174,7 +196,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_11" id="mul_11_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_11_form', 'mul_11_ans', true);">
         <label for="mul_11_11">7<br><SPAN STYLE= "text-decoration:underline">&times; 6</SPAN></label><br>
-        <input type="number" id="mul_11_ans" min="0" max="256" step="1" name="mul_11_11" ><br><br> 
+        <input type="number" id="mul_11_ans" min="0" max="256" step="1" name="mul_11_11" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="6">
+        <input type="hidden" id="w" name="w_val_ind" value="7">
         <input type="hidden" id="answer" name="answer" value="42">
       </form>
     </div>
@@ -186,7 +210,9 @@
     <div style="padding-right: 20%">    
       <form name="mul_12" id="mul_12_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_12_form', 'mul_12_ans', true);">
         <label for="mul_12_12">5<br><SPAN STYLE= "text-decoration:underline">&times; 5</SPAN></label><br>
-        <input type="number" id="mul_12_ans" min="0" max="256" step="1" name="mul_12_12" ><br><br> 
+        <input type="number" id="mul_12_ans" min="0" max="256" step="1" name="mul_12_12" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="5">
+        <input type="hidden" id="w" name="w_val_ind" value="5">
         <input type="hidden" id="answer" name="answer" value="25">
       </form>
     </div>
@@ -198,7 +224,9 @@
     <div style="padding-right: 20%">      
       <form name="mul_13" id="mul_13_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_13_form', 'mul_13_ans', true);">
         <label for="mul_13_13">3<br><SPAN STYLE= "text-decoration:underline">&times; 7</SPAN></label><br>
-        <input type="number" id="mul_13_ans" min="0" max="256" step="1" name="mul_13_13" ><br><br> 
+        <input type="number" id="mul_13_ans" min="0" max="256" step="1" name="mul_13_13" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="3">
+        <input type="hidden" id="w" name="w_val_ind" value="7">
         <input type="hidden" id="answer" name="answer" value="21">
       </form>
     </div>
@@ -210,7 +238,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_14" id="mul_14_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_14_form', 'mul_14_ans', true);">
         <label for="mul_14_14">4<br><SPAN STYLE= "text-decoration:underline">&times; 8</SPAN></label><br>
-        <input type="number" id="mul_14_ans" min="0" max="256" step="1" name="mul_14_14" ><br><br> 
+        <input type="number" id="mul_14_ans" min="0" max="256" step="1" name="mul_14_14" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="4">
+        <input type="hidden" id="w" name="w_val_ind" value="8">
         <input type="hidden" id="answer" name="answer" value="32">
       </form>
     </div>
@@ -222,7 +252,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_15" id="mul_15_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_15_form', 'mul_15_ans', true);">
         <label for="mul_15_15">6<br><SPAN STYLE= "text-decoration:underline">&times; 7</SPAN></label><br>
-        <input type="number" id="mul_15_ans" min="0" max="256" step="1" name="mul_15_15" ><br><br> 
+        <input type="number" id="mul_15_ans" min="0" max="256" step="1" name="mul_15_15" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="6">
+        <input type="hidden" id="w" name="w_val_ind" value="7">
         <input type="hidden" id="answer" name="answer" value="42">
       </form>
     </div>
@@ -234,7 +266,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_16" id="mul_16_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_16_form', 'mul_16_ans', true);">
         <label for="mul_16_16">7<br><SPAN STYLE= "text-decoration:underline">&times; 7</SPAN></label><br>
-        <input type="number" id="mul_16_ans" min="0" max="256" step="1" name="mul_16_16" ><br><br> 
+        <input type="number" id="mul_16_ans" min="0" max="256" step="1" name="mul_16_16" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="7">
+        <input type="hidden" id="w" name="w_val_ind" value="7">
         <input type="hidden" id="answer" name="answer" value="49">
       </form>
     </div>
@@ -246,7 +280,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_17" id="mul_17_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_17_form', 'mul_17_ans', true);">
         <label for="mul_17_17">4<br><SPAN STYLE= "text-decoration:underline">&times; 9</SPAN></label><br>
-        <input type="number" id="mul_17_ans" min="0" max="256" step="1" name="mul_17_17" ><br><br> 
+        <input type="number" id="mul_17_ans" min="0" max="256" step="1" name="mul_17_17" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="4">
+        <input type="hidden" id="w" name="w_val_ind" value="9">
         <input type="hidden" id="answer" name="answer" value="36">
       </form>
     </div>
@@ -258,7 +294,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_18" id="mul_18_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_18_form', 'mul_18_ans', true);">
         <label for="mul_18_18">9<br><SPAN STYLE= "text-decoration:underline">&times; 3</SPAN></label><br>
-        <input type="number" id="mul_18_ans" min="0" max="256" step="1" name="mul_18_18" ><br><br> 
+        <input type="number" id="mul_18_ans" min="0" max="256" step="1" name="mul_18_18" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="9">
+        <input type="hidden" id="w" name="w_val_ind" value="3">
         <input type="hidden" id="answer" name="answer" value="27">
       </form>
     </div>
@@ -270,7 +308,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_19" id="mul_19_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_19_form', 'mul_19_ans', true);">
         <label for="mul_19_19">5<br><SPAN STYLE= "text-decoration:underline">&times; 3</SPAN></label><br>
-        <input type="number" id="mul_19_ans" min="0" max="256" step="1" name="mul_19_19" ><br><br> 
+        <input type="number" id="mul_19_ans" min="0" max="256" step="1" name="mul_19_19" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="5">
+        <input type="hidden" id="w" name="w_val_ind" value="3">
         <input type="hidden" id="answer" name="answer" value="15">
       </form>
     </div>
@@ -282,7 +322,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_20" id="mul_20_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_20_form', 'mul_20_ans', true);">
         <label for="mul_20_20">8<br><SPAN STYLE= "text-decoration:underline">&times; 7</SPAN></label><br>
-        <input type="number" id="mul_20_ans" min="0" max="256" step="1" name="mul_20_20" ><br><br> 
+        <input type="number" id="mul_20_ans" min="0" max="256" step="1" name="mul_20_20" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="8">
+        <input type="hidden" id="w" name="w_val_ind" value="7">
         <input type="hidden" id="answer" name="answer" value="56">
       </form>
     </div>
@@ -294,7 +336,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_21" id="mul_21_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_21_form', 'mul_21_ans', true);">
         <label for="mul_21_21">4<br><SPAN STYLE= "text-decoration:underline">&times; 3</SPAN></label><br>
-        <input type="number" id="mul_21_ans" min="0" max="256" step="1" name="mul_21_21" ><br><br> 
+        <input type="number" id="mul_21_ans" min="0" max="256" step="1" name="mul_21_21" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="3">
+        <input type="hidden" id="w" name="w_val_ind" value="4">
         <input type="hidden" id="answer" name="answer" value="12">
       </form>
     </div>
@@ -306,7 +350,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_22" id="mul_22_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_22_form', 'mul_22_ans', true);">
         <label for="mul_22_22">7<br><SPAN STYLE= "text-decoration:underline">&times; 2</SPAN></label><br>
-        <input type="number" id="mul_22_ans" min="0" max="256" step="1" name="mul_22_22" ><br><br> 
+        <input type="number" id="mul_22_ans" min="0" max="256" step="1" name="mul_22_22" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="7">
+        <input type="hidden" id="w" name="w_val_ind" value="2">
         <input type="hidden" id="answer" name="answer" value="14">
       </form>
     </div>
@@ -318,7 +364,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_23" id="mul_23_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_23_form', 'mul_23_ans', true);">
         <label for="mul_23_23">5<br><SPAN STYLE= "text-decoration:underline">&times; 8</SPAN></label><br>
-        <input type="number" id="mul_23_ans" min="0" max="256" step="1" name="mul_23_23" ><br><br> 
+        <input type="number" id="mul_23_ans" min="0" max="256" step="1" name="mul_23_23" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="5">
+        <input type="hidden" id="w" name="w_val_ind" value="8">
         <input type="hidden" id="answer" name="answer" value="40">
       </form>
     </div>
@@ -331,6 +379,8 @@
       <form name="mul_24" id="mul_24_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_24_form', 'mul_24_ans', true);">
         <label for="mul_24_24">2<br><SPAN STYLE= "text-decoration:underline">&times; 3</SPAN></label><br>
         <input type="number" id="mul_24_ans" min="0" max="256" step="1" name="mul_24_24" ><br><br> 
+        <input type="hidden" id="z" name="z_val_ind" value="2">
+        <input type="hidden" id="w" name="w_val_ind" value="3">
         <input type="hidden" id="answer" name="answer" value="6">
       </form>
     </div>
@@ -342,7 +392,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_25" id="mul_25_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_25_form', 'mul_25_ans', true);">
         <label for="mul_25_25">9<br><SPAN STYLE= "text-decoration:underline">&times; 4</SPAN></label><br>
-        <input type="number" id="mul_25_ans" min="0" max="256" step="1" name="mul_25_25" ><br><br> 
+        <input type="number" id="mul_25_ans" min="0" max="256" step="1" name="mul_25_25" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="9">
+        <input type="hidden" id="w" name="w_val_ind" value="4">
         <input type="hidden" id="answer" name="answer" value="36">
       </form>
     </div>
@@ -355,6 +407,8 @@
       <form name="mul_26" id="mul_26_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_26_form', 'mul_26_ans', true);">
         <label for="mul_26_26">2<br><SPAN STYLE= "text-decoration:underline">&times; 5</SPAN></label><br>
         <input type="number" id="mul_26_ans" min="0" max="256" step="1" name="mul_26_26" ><br><br> 
+        <input type="hidden" id="z" name="z_val_ind" value="2">
+        <input type="hidden" id="w" name="w_val_ind" value="5">
         <input type="hidden" id="answer" name="answer" value="10">
       </form>
     </div>
@@ -366,7 +420,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_27" id="mul_27_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_27_form', 'mul_27_ans', true);">
         <label for="mul_27_27">6<br><SPAN STYLE= "text-decoration:underline">&times; 5</SPAN></label><br>
-        <input type="number" id="mul_27_ans" min="0" max="256" step="1" name="mul_27_27" ><br><br> 
+        <input type="number" id="mul_27_ans" min="0" max="256" step="1" name="mul_27_27" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="6">
+        <input type="hidden" id="w" name="w_val_ind" value="5">
         <input type="hidden" id="answer" name="answer" value="30">
       </form>
     </div>
@@ -378,7 +434,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_28" id="mul_28_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_28_form', 'mul_28_ans', true);">
         <label for="mul_28_28">5<br><SPAN STYLE= "text-decoration:underline">&times; 4</SPAN></label><br>
-        <input type="number" id="mul_28_ans" min="0" max="256" step="1" name="mul_28_28" ><br><br> 
+        <input type="number" id="mul_28_ans" min="0" max="256" step="1" name="mul_28_28" ><br><br>        
+        <input type="hidden" id="z" name="z_val_ind" value="5">
+        <input type="hidden" id="w" name="w_val_ind" value="4"> 
         <input type="hidden" id="answer" name="answer" value="20">
       </form>
     </div>
@@ -390,7 +448,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_29" id="mul_29_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_29_form', 'mul_29_ans', true);">
         <label for="mul_29_29">3<br><SPAN STYLE= "text-decoration:underline">&times; 9</SPAN></label><br>
-        <input type="number" id="mul_29_ans" min="0" max="256" step="1" name="mul_29_29" ><br><br> 
+        <input type="number" id="mul_29_ans" min="0" max="256" step="1" name="mul_29_29" ><br><br>        
+        <input type="hidden" id="z" name="z_val_ind" value="3">
+        <input type="hidden" id="w" name="w_val_ind" value="9"> 
         <input type="hidden" id="answer" name="answer" value="27">
       </form>
     </div>
@@ -402,7 +462,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_30" id="mul_30_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_30_form', 'mul_30_ans', true);">
         <label for="mul_30_30">7<br><SPAN STYLE= "text-decoration:underline">&times; 1</SPAN></label><br>
-        <input type="number" id="mul_30_ans" min="0" max="256" step="1" name="mul_30_30" ><br><br> 
+        <input type="number" id="mul_30_ans" min="0" max="256" step="1" name="mul_30_30" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="7">
+        <input type="hidden" id="w" name="w_val_ind" value="1">
         <input type="hidden" id="answer" name="answer" value="7">
       </form>
     </div>
@@ -414,7 +476,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_31" id="mul_31_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_31_form', 'mul_31_ans', true);">
         <label for="mul_31_31">8<br><SPAN STYLE= "text-decoration:underline">&times; 9</SPAN></label><br>
-        <input type="number" id="mul_31_ans" min="0" max="256" step="1" name="mul_31_31" ><br><br> 
+        <input type="number" id="mul_31_ans" min="0" max="256" step="1" name="mul_31_31" ><br><br>        
+        <input type="hidden" id="z" name="z_val_ind" value="8">
+        <input type="hidden" id="w" name="w_val_ind" value="9"> 
         <input type="hidden" id="answer" name="answer" value="72">
       </form>
     </div>
@@ -426,7 +490,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_32" id="mul_32_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_32_form', 'mul_32_ans', true);">
         <label for="mul_32_32">9<br><SPAN STYLE= "text-decoration:underline">&times; 1</SPAN></label><br>
-        <input type="number" id="mul_32_ans" min="0" max="256" step="1" name="mul_32_32" ><br><br> 
+        <input type="number" id="mul_32_ans" min="0" max="256" step="1" name="mul_32_32" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="9">
+        <input type="hidden" id="w" name="w_val_ind" value="1">
         <input type="hidden" id="answer" name="answer" value="9">
       </form>
     </div>
@@ -438,7 +504,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_33" id="mul_33_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_33_form', 'mul_33_ans', true);">
         <label for="mul_33_33">7<br><SPAN STYLE= "text-decoration:underline">&times; 5</SPAN></label><br>
-        <input type="number" id="mul_33_ans" min="0" max="256" step="1" name="mul_33_33" ><br><br> 
+        <input type="number" id="mul_33_ans" min="0" max="256" step="1" name="mul_33_33" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="7">
+        <input type="hidden" id="w" name="w_val_ind" value="5">
         <input type="hidden" id="answer" name="answer" value="35">
       </form>
     </div>
@@ -450,7 +518,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_34" id="mul_34_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_34_form', 'mul_34_ans', true);">
         <label for="mul_34_34">4<br><SPAN STYLE= "text-decoration:underline">&times; 4</SPAN></label><br>
-        <input type="number" id="mul_34_ans" min="0" max="256" step="1" name="mul_34_34" ><br><br> 
+        <input type="number" id="mul_34_ans" min="0" max="256" step="1" name="mul_34_34" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="4">
+        <input type="hidden" id="w" name="w_val_ind" value="4">
         <input type="hidden" id="answer" name="answer" value="16">
       </form>
     </div>
@@ -462,7 +532,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_35" id="mul_35_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_35_form', 'mul_35_ans', true);">
         <label for="mul_35_35">6<br><SPAN STYLE= "text-decoration:underline">&times; 6</SPAN></label><br>
-        <input type="number" id="mul_35_ans" min="0" max="256" step="1" name="mul_35_35" ><br><br> 
+        <input type="number" id="mul_35_ans" min="0" max="256" step="1" name="mul_35_35" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="6">
+        <input type="hidden" id="w" name="w_val_ind" value="6">
         <input type="hidden" id="answer" name="answer" value="36">
       </form>
     </div>
@@ -474,7 +546,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_36" id="mul_36_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_36_form', 'mul_36_ans', true);">
         <label for="mul_36_36">4<br><SPAN STYLE= "text-decoration:underline">&times; 6</SPAN></label><br>
-        <input type="number" id="mul_36_ans" min="0" max="256" step="1" name="mul_36_36" ><br><br> 
+        <input type="number" id="mul_36_ans" min="0" max="256" step="1" name="mul_36_36" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="4">
+        <input type="hidden" id="w" name="w_val_ind" value="6">
         <input type="hidden" id="answer" name="answer" value="24">
       </form>
     </div>
@@ -486,7 +560,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_37" id="mul_37_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_37_form', 'mul_37_ans', true);">
         <label for="mul_37_37">4<br><SPAN STYLE= "text-decoration:underline">&times; 5</SPAN></label><br>
-        <input type="number" id="mul_37_ans" min="0" max="256" step="1" name="mul_37_37" ><br><br> 
+        <input type="number" id="mul_37_ans" min="0" max="256" step="1" name="mul_37_37" ><br><br>        
+        <input type="hidden" id="z" name="z_val_ind" value="4">
+        <input type="hidden" id="w" name="w_val_ind" value="5"> 
         <input type="hidden" id="answer" name="answer" value="20">
       </form>
     </div>
@@ -498,7 +574,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_38" id="mul_38_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_38_form', 'mul_38_ans', true);">
         <label for="mul_38_38">6<br><SPAN STYLE= "text-decoration:underline">&times; 8</SPAN></label><br>
-        <input type="number" id="mul_38_ans" min="0" max="256" step="1" name="mul_38_38" ><br><br> 
+        <input type="number" id="mul_38_ans" min="0" max="256" step="1" name="mul_38_38" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="6">
+        <input type="hidden" id="w" name="w_val_ind" value="8">
         <input type="hidden" id="answer" name="answer" value="48">
       </form>
     </div>
@@ -510,7 +588,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_39" id="mul_39_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_39_form', 'mul_39_ans', true);">
         <label for="mul_39_39">3<br><SPAN STYLE= "text-decoration:underline">&times; 8</SPAN></label><br>
-        <input type="number" id="mul_39_ans" min="0" max="256" step="1" name="mul_39_39" ><br><br> 
+        <input type="number" id="mul_39_ans" min="0" max="256" step="1" name="mul_39_39" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="3">
+        <input type="hidden" id="w" name="w_val_ind" value="8">
         <input type="hidden" id="answer" name="answer" value="24">
       </form>
     </div>
@@ -522,7 +602,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_40" id="mul_40_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_40_form', 'mul_40_ans', true);">
         <label for="mul_40_40">2<br><SPAN STYLE= "text-decoration:underline">&times; 2</SPAN></label><br>
-        <input type="number" id="mul_40_ans" min="0" max="256" step="1" name="mul_40_40" ><br><br> 
+        <input type="number" id="mul_40_ans" min="0" max="256" step="1" name="mul_40_40" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="2">
+        <input type="hidden" id="w" name="w_val_ind" value="2">
         <input type="hidden" id="answer" name="answer" value="4">
       </form>
     </div>
@@ -534,7 +616,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_41" id="mul_41_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_41_form', 'mul_41_ans', true);">
         <label for="mul_41_41">9<br><SPAN STYLE= "text-decoration:underline">&times; 5</SPAN></label><br>
-        <input type="number" id="mul_41_ans" min="0" max="256" step="1" name="mul_41_41" ><br><br> 
+        <input type="number" id="mul_41_ans" min="0" max="256" step="1" name="mul_41_41" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="9">
+        <input type="hidden" id="w" name="w_val_ind" value="5">
         <input type="hidden" id="answer" name="answer" value="45">
       </form>
     </div>
@@ -546,7 +630,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_42" id="mul_42_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_42_form', 'mul_42_ans', true);">
         <label for="mul_42_42">7<br><SPAN STYLE= "text-decoration:underline">&times; 4</SPAN></label><br>
-        <input type="number" id="mul_42_ans" min="0" max="256" step="1" name="mul_42_42" ><br><br> 
+        <input type="number" id="mul_42_ans" min="0" max="256" step="1" name="mul_42_42" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="7">
+        <input type="hidden" id="w" name="w_val_ind" value="4">
         <input type="hidden" id="answer" name="answer" value="28">
       </form>
     </div>
@@ -558,7 +644,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_43" id="mul_43_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_43_form', 'mul_43_ans', true);">
         <label for="mul_43_43">3<br><SPAN STYLE= "text-decoration:underline">&times; 5</SPAN></label><br>
-        <input type="number" id="mul_43_ans" min="0" max="256" step="1" name="mul_43_43" ><br><br> 
+        <input type="number" id="mul_43_ans" min="0" max="256" step="1" name="mul_43_43" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="3">
+        <input type="hidden" id="w" name="w_val_ind" value="5">
         <input type="hidden" id="answer" name="answer" value="15">
       </form>
     </div>
@@ -570,7 +658,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_44" id="mul_44_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_44_form', 'mul_44_ans', true);">
         <label for="mul_44_44">3<br><SPAN STYLE= "text-decoration:underline">&times; 6</SPAN></label><br>
-        <input type="number" id="mul_44_ans" min="0" max="256" step="1" name="mul_44_44" ><br><br> 
+        <input type="number" id="mul_44_ans" min="0" max="256" step="1" name="mul_44_44" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="3">
+        <input type="hidden" id="w" name="w_val_ind" value="6">
         <input type="hidden" id="answer" name="answer" value="18">
       </form>
     </div>
@@ -582,7 +672,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_45" id="mul_45_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_45_form', 'mul_45_ans', true);">
         <label for="mul_45_45">8<br><SPAN STYLE= "text-decoration:underline">&times; 8</SPAN></label><br>
-        <input type="number" id="mul_45_ans" min="0" max="256" step="1" name="mul_45_45" ><br><br> 
+        <input type="number" id="mul_45_ans" min="0" max="256" step="1" name="mul_45_45" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="8">
+        <input type="hidden" id="w" name="w_val_ind" value="8">
         <input type="hidden" id="answer" name="answer" value="64">
       </form>
     </div>
@@ -594,7 +686,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_46" id="mul_46_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_46_form', 'mul_46_ans', true);">
         <label for="mul_46_46">8<br><SPAN STYLE= "text-decoration:underline">&times; 5</SPAN></label><br>
-        <input type="number" id="mul_46_ans" min="0" max="256" step="1" name="mul_46_46" ><br><br> 
+        <input type="number" id="mul_46_ans" min="0" max="256" step="1" name="mul_46_46" ><br><br>        
+        <input type="hidden" id="z" name="z_val_ind" value="8">
+        <input type="hidden" id="w" name="w_val_ind" value="5"> 
         <input type="hidden" id="answer" name="answer" value="40">
       </form>
     </div>
@@ -606,7 +700,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_47" id="mul_47_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_47_form', 'mul_47_ans', true);">
         <label for="mul_47_47">8<br><SPAN STYLE= "text-decoration:underline">&times; 3</SPAN></label><br>
-        <input type="number" id="mul_47_ans" min="0" max="256" step="1" name="mul_47_47" ><br><br> 
+        <input type="number" id="mul_47_ans" min="0" max="256" step="1" name="mul_47_47" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="8">
+        <input type="hidden" id="w" name="w_val_ind" value="3">
         <input type="hidden" id="answer" name="answer" value="24">
       </form>
     </div>
@@ -618,7 +714,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_48" id="mul_48_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_48_form', 'mul_48_ans', true);">
         <label for="mul_48_48">6<br><SPAN STYLE= "text-decoration:underline">&times; 9</SPAN></label><br>
-        <input type="number" id="mul_48_ans" min="0" max="256" step="1" name="mul_48_48" ><br><br> 
+        <input type="number" id="mul_48_ans" min="0" max="256" step="1" name="mul_48_48" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="6">
+        <input type="hidden" id="w" name="w_val_ind" value="9">
         <input type="hidden" id="answer" name="answer" value="54">
       </form>
     </div>
@@ -630,7 +728,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_49" id="mul_49_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_49_form', 'mul_49_ans', true);">
         <label for="mul_49_49">9<br><SPAN STYLE= "text-decoration:underline">&times; 7</SPAN></label><br>
-        <input type="number" id="mul_49_ans" min="0" max="256" step="1" name="mul_49_49" ><br><br> 
+        <input type="number" id="mul_49_ans" min="0" max="256" step="1" name="mul_49_49" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="9">
+        <input type="hidden" id="w" name="w_val_ind" value="7">
         <input type="hidden" id="answer" name="answer" value="63">
       </form>
     </div>
@@ -642,7 +742,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_50" id="mul_50_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_50_form', 'mul_50_ans', true);">
         <label for="mul_50_50">9<br><SPAN STYLE= "text-decoration:underline">&times; 6</SPAN></label><br>
-        <input type="number" id="mul_50_ans" min="0" max="256" step="1" name="mul_50_50" ><br><br> 
+        <input type="number" id="mul_50_ans" min="0" max="256" step="1" name="mul_50_50" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="9">
+        <input type="hidden" id="w" name="w_val_ind" value="6">
         <input type="hidden" id="answer" name="answer" value="54">
       </form>
     </div>
@@ -654,7 +756,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_51" id="mul_51_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_51_form', 'mul_51_ans', true);">
         <label for="mul_51_51">5<br><SPAN STYLE= "text-decoration:underline">&times; 6</SPAN></label><br>
-        <input type="number" id="mul_51_ans" min="0" max="256" step="1" name="mul_51_51" ><br><br> 
+        <input type="number" id="mul_51_ans" min="0" max="256" step="1" name="mul_51_51" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="5">
+        <input type="hidden" id="w" name="w_val_ind" value="6">
         <input type="hidden" id="answer" name="answer" value="30">
       </form>
     </div>
@@ -666,7 +770,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_52" id="mul_52_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_52_form', 'mul_52_ans', true);">
         <label for="mul_52_52">6<br><SPAN STYLE= "text-decoration:underline">&times; 3</SPAN></label><br>
-        <input type="number" id="mul_52_ans" min="0" max="256" step="1" name="mul_52_52" ><br><br> 
+        <input type="number" id="mul_52_ans" min="0" max="256" step="1" name="mul_52_52" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="6">
+        <input type="hidden" id="w" name="w_val_ind" value="3">
         <input type="hidden" id="answer" name="answer" value="18">
       </form>
     </div>
@@ -678,7 +784,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_53" id="mul_53_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_53_form', 'mul_53_ans', true);">
         <label for="mul_53_53">2<br><SPAN STYLE= "text-decoration:underline">&times; 1</SPAN></label><br>
-        <input type="number" id="mul_53_ans" min="0" max="256" step="1" name="mul_53_53" ><br><br> 
+        <input type="number" id="mul_53_ans" min="0" max="256" step="1" name="mul_53_53" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="2">
+        <input type="hidden" id="w" name="w_val_ind" value="1">
         <input type="hidden" id="answer" name="answer" value="2">
       </form>
     </div>
@@ -691,6 +799,8 @@
       <form name="mul_54" id="mul_54_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_54_form', 'mul_54_ans', true);">
         <label for="mul_54_54">7<br><SPAN STYLE= "text-decoration:underline">&times; 8</SPAN></label><br>
         <input type="number" id="mul_54_ans" min="0" max="256" step="1" name="mul_54_54" ><br><br> 
+        <input type="hidden" id="z" name="z_val_ind" value="7">
+        <input type="hidden" id="w" name="w_val_ind" value="8">
         <input type="hidden" id="answer" name="answer" value="56">
       </form>
     </div>
@@ -702,7 +812,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_55" id="mul_55_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_55_form', 'mul_55_ans', true);">
         <label for="mul_55_55">9<br><SPAN STYLE= "text-decoration:underline">&times; 2</SPAN></label><br>
-        <input type="number" id="mul_55_ans" min="0" max="256" step="1" name="mul_55_55" ><br><br> 
+        <input type="number" id="mul_55_ans" min="0" max="256" step="1" name="mul_55_55" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="9">
+        <input type="hidden" id="w" name="w_val_ind" value="2">
         <input type="hidden" id="answer" name="answer" value="18">
       </form>
     </div>
@@ -714,7 +826,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_56" id="mul_56_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_56_form', 'mul_56_ans', true);">
         <label for="mul_56_56">8<br><SPAN STYLE= "text-decoration:underline">&times; 4</SPAN></label><br>
-        <input type="number" id="mul_56_ans" min="0" max="256" step="1" name="mul_56_56" ><br><br> 
+        <input type="number" id="mul_56_ans" min="0" max="256" step="1" name="mul_56_56" ><br><br>        
+        <input type="hidden" id="z" name="z_val_ind" value="8">
+        <input type="hidden" id="w" name="w_val_ind" value="4"> 
         <input type="hidden" id="answer" name="answer" value="32">
       </form>
     </div>
@@ -726,7 +840,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_57" id="mul_57_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_57_form', 'mul_57_ans', true);">
         <label for="mul_57_57">3<br><SPAN STYLE= "text-decoration:underline">&times; 2</SPAN></label><br>
-        <input type="number" id="mul_57_ans" min="0" max="256" step="1" name="mul_57_57" ><br><br> 
+        <input type="number" id="mul_57_ans" min="0" max="256" step="1" name="mul_57_57" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="3">
+        <input type="hidden" id="w" name="w_val_ind" value="2">
         <input type="hidden" id="answer" name="answer" value="6">
       </form>
     </div>
@@ -738,7 +854,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_58" id="mul_58_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_58_form', 'mul_58_ans', true);">
         <label for="mul_58_58">4<br><SPAN STYLE= "text-decoration:underline">&times; 7</SPAN></label><br>
-        <input type="number" id="mul_58_ans" min="0" max="256" step="1" name="mul_58_58" ><br><br> 
+        <input type="number" id="mul_58_ans" min="0" max="256" step="1" name="mul_58_58" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="4">
+        <input type="hidden" id="w" name="w_val_ind" value="7">
         <input type="hidden" id="answer" name="answer" value="28">
       </form>
     </div>
@@ -750,7 +868,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_59" id="mul_59_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_59_form', 'mul_59_ans', true);">
         <label for="mul_59_59">8<br><SPAN STYLE= "text-decoration:underline">&times; 2</SPAN></label><br>
-        <input type="number" id="mul_59_ans" min="0" max="256" step="1" name="mul_59_59" ><br><br> 
+        <input type="number" id="mul_59_ans" min="0" max="256" step="1" name="mul_59_59" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="8">
+        <input type="hidden" id="w" name="w_val_ind" value="2">
         <input type="hidden" id="answer" name="answer" value="16">
       </form>
     </div>
@@ -762,7 +882,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_60" id="mul_60_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_60_form', 'mul_60_ans', true);">
         <label for="mul_60_60">8<br><SPAN STYLE= "text-decoration:underline">&times; 6</SPAN></label><br>
-        <input type="number" id="mul_60_ans" min="0" max="256" step="1" name="mul_60_60" ><br><br> 
+        <input type="number" id="mul_60_ans" min="0" max="256" step="1" name="mul_60_60" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="8">
+        <input type="hidden" id="w" name="w_val_ind" value="6">
         <input type="hidden" id="answer" name="answer" value="48">
       </form>
     </div>
@@ -774,7 +896,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_61" id="mul_61_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_61_form', 'mul_61_ans', true);">
         <label for="mul_61_61">4<br><SPAN STYLE= "text-decoration:underline">&times; 1</SPAN></label><br>
-        <input type="number" id="mul_61_ans" min="0" max="256" step="1" name="mul_61_61" ><br><br> 
+        <input type="number" id="mul_61_ans" min="0" max="256" step="1" name="mul_61_61" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="4">
+        <input type="hidden" id="w" name="w_val_ind" value="1">
         <input type="hidden" id="answer" name="answer" value="4">
       </form>
     </div>
@@ -786,7 +910,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_62" id="mul_62_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_62_form', 'mul_62_ans', true);">
         <label for="mul_62_62">3<br><SPAN STYLE= "text-decoration:underline">&times; 1</SPAN></label><br>
-        <input type="number" id="mul_62_ans" min="0" max="256" step="1" name="mul_62_62" ><br><br> 
+        <input type="number" id="mul_62_ans" min="0" max="256" step="1" name="mul_62_62" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="3">
+        <input type="hidden" id="w" name="w_val_ind" value="1">
         <input type="hidden" id="answer" name="answer" value="3">
       </form>
     </div>
@@ -798,7 +924,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_63" id="mul_63_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_63_form', 'mul_63_ans', true);">
         <label for="mul_63_63">2<br><SPAN STYLE= "text-decoration:underline">&times; 7</SPAN></label><br>
-        <input type="number" id="mul_63_ans" min="0" max="256" step="1" name="mul_63_63" ><br><br> 
+        <input type="number" id="mul_63_ans" min="0" max="256" step="1" name="mul_63_63" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="2">
+        <input type="hidden" id="w" name="w_val_ind" value="7">
         <input type="hidden" id="answer" name="answer" value="14">
       </form>
     </div>
@@ -810,7 +938,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_64" id="mul_64_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_64_form', 'mul_64_ans', true);">
         <label for="mul_64_64">2<br><SPAN STYLE= "text-decoration:underline">&times; 8</SPAN></label><br>
-        <input type="number" id="mul_64_ans" min="0" max="256" step="1" name="mul_64_64" ><br><br> 
+        <input type="number" id="mul_64_ans" min="0" max="256" step="1" name="mul_64_64" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="2">
+        <input type="hidden" id="w" name="w_val_ind" value="8">
         <input type="hidden" id="answer" name="answer" value="16">
       </form>
     </div>
@@ -822,7 +952,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_65" id="mul_65_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_65_form', 'mul_65_ans', true);">
         <label for="mul_65_65">2<br><SPAN STYLE= "text-decoration:underline">&times; 4</SPAN></label><br>
-        <input type="number" id="mul_65_ans" min="0" max="256" step="1" name="mul_65_65" ><br><br> 
+        <input type="number" id="mul_65_ans" min="0" max="256" step="1" name="mul_65_65" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="2">
+        <input type="hidden" id="w" name="w_val_ind" value="4">
         <input type="hidden" id="answer" name="answer" value="8">
       </form>
     </div>
@@ -834,7 +966,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_66" id="mul_66_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_66_form', 'mul_66_ans', true);">
         <label for="mul_66_66">9<br><SPAN STYLE= "text-decoration:underline">&times; 9</SPAN></label><br>
-        <input type="number" id="mul_66_ans" min="0" max="256" step="1" name="mul_66_66" ><br><br> 
+        <input type="number" id="mul_66_ans" min="0" max="256" step="1" name="mul_66_66" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="9">
+        <input type="hidden" id="w" name="w_val_ind" value="9">
         <input type="hidden" id="answer" name="answer" value="81">
       </form>
     </div>
@@ -846,7 +980,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_67" id="mul_67_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_67_form', 'mul_67_ans', true);">
         <label for="mul_67_67">5<br><SPAN STYLE= "text-decoration:underline">&times; 9</SPAN></label><br>
-        <input type="number" id="mul_67_ans" min="0" max="256" step="1" name="mul_67_67" ><br><br> 
+        <input type="number" id="mul_67_ans" min="0" max="256" step="1" name="mul_67_67" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="5">
+        <input type="hidden" id="w" name="w_val_ind" value="9">
         <input type="hidden" id="answer" name="answer" value="45">
       </form>
     </div>
@@ -858,7 +994,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_68" id="mul_68_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_68_form', 'mul_68_ans', true);">
         <label for="mul_68_68">5<br><SPAN STYLE= "text-decoration:underline">&times; 7</SPAN></label><br>
-        <input type="number" id="mul_68_ans" min="0" max="256" step="1" name="mul_68_68" ><br><br> 
+        <input type="number" id="mul_68_ans" min="0" max="256" step="1" name="mul_68_68" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="5">
+        <input type="hidden" id="w" name="w_val_ind" value="7">
         <input type="hidden" id="answer" name="answer" value="35">
       </form>
     </div>
@@ -870,7 +1008,9 @@
     <div style="padding-right: 20%">       
       <form name="mul_69" id="mul_69_form" onsubmit="event.preventDefault(); advanceTest('testmult', 'mul_69_form', 'mul_69_ans', true);">
         <label for="mul_69_69">3<br><SPAN STYLE= "text-decoration:underline">&times; 3</SPAN></label><br>
-        <input type="number" id="mul_69_ans" min="0" max="256" step="1" name="mul_69_69" ><br><br> 
+        <input type="number" id="mul_69_ans" min="0" max="256" step="1" name="mul_69_69" ><br><br>         
+        <input type="hidden" id="z" name="z_val_ind" value="3">
+        <input type="hidden" id="w" name="w_val_ind" value="3">
         <input type="hidden" id="answer" name="answer" value="9">
       </form>
     </div>
@@ -882,7 +1022,8 @@
 
   <p class='results' id="percent_score"></p>
 
-  
+  <p class='results' id="tabel_score"></p>
+
   <div id="timer" class="countdownTimer">Time left = <span id="timer"></span></div>
 
   
@@ -891,8 +1032,10 @@
 var in_test = false
 var timer_active = 0
 var question_order = []
+var answer_array = new Array(100).fill(false)
 var number_correct = 0
 var value = 0
+var ignore_array = new Array(20).fill(0)
 
 /function openPage(pageName,elmnt,color) {
   var result = true
@@ -973,6 +1116,7 @@ function beginTest(testName) {
   document.getElementById('raw_score').innerHTML = "";
   document.getElementById('percent_score').innerHTML = "";
   number_correct = 0;
+  answer_array = new Array(100).fill(false);
   var i, elementType, questions
   elementType = getNumTestAnswers(testName);
   questions = document.getElementsByClassName(elementType);
@@ -998,11 +1142,26 @@ function advanceTest(testName, formid, questid, answered) {
   //If the bool is false then the skip was clicked, so this checks if the answer is corect 
   var answer, corect, temp
   temp = question_order[0];
+  var pairs= getPairValues(testName);
+  var pair1 = pairs[0];
+  var pair2 = pairs[1];
+  var size = answer_array.length;
   if (answered == true) {
     answer = document.getElementById(formid).elements[questid].value;
     corect = document.getElementById(formid).elements['answer'].value;
+    index1 = document.getElementById(formid).elements[pair1].value;
+    index2 = document.getElementById(formid).elements[pair2].value;
+    var indexed = index1 + index2;
     if (answer == corect) {
         number_correct += 1;
+        answer_array[indexed] = true;
+        if (answer_array.length > size) {
+          alert('Something is wrong' + indexed.toString());
+        }
+    } 
+    else {
+      answer_array[indexed] = false;
+
     }
     question_order.shift();
   }
@@ -1019,6 +1178,7 @@ function advanceTest(testName, formid, questid, answered) {
 }
 
 function end_test(testName, outOfTime) {
+  var i,j 
   if (outOfTime == true) {
     //So you ran out of time...
     question_order[0].style.display = 'none';
@@ -1026,7 +1186,6 @@ function end_test(testName, outOfTime) {
   else {
     alert('Great Job! You finished the Test! Lets See how you did!');
   }
-
   var element_type = getNumTestAnswers(testName);
   var num_questions = document.getElementsByClassName(element_type);
   num_questions = num_questions.length;
@@ -1041,8 +1200,30 @@ function end_test(testName, outOfTime) {
   }
   var msg1 = "Great Job you got a total of " + number_correct.toString() + " questions correct!";
   var msg2 = "That Comes out to a percent of " + percent.toString() + "&#37;";
+  var tblmsg = " This is a table breackdown of your score. <br> X are incorrect and &check; are correct answers. <br>&nbsp;&nbsp;0&nbsp;1&nbsp;2&nbsp;3&nbsp;4&nbsp;5&nbsp;6&nbsp;7&nbsp;8&nbsp;9";
+  var index = 0
+  for (i= 0; i< 10; i++) {
+    tblmsg = tblmsg + '<br>';
+    tblmsg = tblmsg + i.toString() + '&nbsp;';
+    for (j=0; j< 10; j++) {
+      //if (ignore_array.includes(index) == true) {
+      //  If this question isnt included we put a o
+      // tblmsg = tblmsg + 'O&nbsp;';
+      //}/
+
+      if (answer_array[index] == true) {
+        //If true we got it right so we put a checkmark
+        tblmsg = tblmsg + '&check;&nbsp;';
+      }
+      else {
+        tblmsg = tblmsg + 'X&nbsp;';
+      }
+      index += 1;
+    }
+  }
   document.getElementById('raw_score').innerHTML = msg1;
   document.getElementById('percent_score').innerHTML = msg2;
+  document.getElementById('tabel_score').innerHTML = tblmsg;
   document.getElementById('timer').style.display = "none";
 
 }
@@ -1051,6 +1232,13 @@ function getNumTestAnswers(testName) {
   if (testName == "testmult") {
     return 'multiplication';
   }
+}
+
+function getPairValues(testName) {
+  if (testName == "testmult") {
+    return ['z', 'w'];
+  }
+
 }
 
 function startTimer(testName) {
@@ -1084,6 +1272,7 @@ function returnInterupt() {
     if (result==true) {
       clearTimeout(timer_active);
       number_correct = 0;
+      answer_array = new Array(100).fill(false);
       location.href = "index.html";
     }
     else {
