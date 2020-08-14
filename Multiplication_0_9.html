@@ -34,8 +34,11 @@
 <!-- Once the time is filled out in the start page, the test page here will be activated. -->
 <div id="testmult" class="tabcontent">
   <h3>Multiplication 0-9 Test</h3>
-  <p> Enter your answer in the space privided and press enter. If you dont know the answer press Skip.
+  <p id="instructions"> Enter your answer in the space privided and press enter. If you dont know the answer press Skip.
   </p>
+
+
+  <!--<button class="button3 button12" id="testPrintoutButton" onclick="end_test('testmult', true)">End Test</button> -->
   
   <!-- advanceTest(testName, formid, questid, answered = bool if the user skipped the question.) -->
   <div id="mul_0" class="multiplication">  
@@ -1020,8 +1023,6 @@
 
   <p class='results' id="raw_score"></p>
 
-  <p class='results' id="percent_score"></p>
-
   <p class='results' id='tabel_score'></p>
 
   <div id="timer" class="countdownTimer">Time left = <span id="timer"></span></div>
@@ -1029,39 +1030,14 @@
   
 </div>
 <script>
-var in_test = false
-var timer_active = 0
-var question_order = []
-var answer_array = new Array(100).fill(false)
-var number_correct = 0
-var value = 0
-var ignore_array = new Array(20).fill(0)
+var in_test = false;
+var timer_active = 0;
+var question_order = [];
+var answer_array = new Array(100).fill(false);
+var number_correct = 0;
+var value = 0;
+var ignore_array_mult = [20,30,40,51,60,61,70,80,81,90];
 
-/function openPage(pageName,elmnt,color) {
-  var result = true
-  if (in_test == true) {
-    result = confirm("Are you sure you want to exit test, your progress will be lost?")
-    clearTimeout(timer_active);
-    number_correct = 0
-  }
-  if (result == true) {
-    in_test = false
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablink");
-    for (i = 0; i < tablinks.length; i++) {
-      if (tablinks[i].style.display == "none") {
-        tablinks[i].style.display = "block";
-      }
-      tablinks[i].style.backgroundColor = "";
-    }
-    document.getElementById(pageName).style.display = "block";
-    elmnt.style.backgroundColor = color;
-  }
-}/
 function hideTab(element){
   dogument.getElementById(element).style.display = "none"
 }
@@ -1114,7 +1090,7 @@ function resetForms() {
 function beginTest(testName) {
   //to bigin the test we need to initialize our answers, shuffle the questions, and show the first question. 
   document.getElementById('raw_score').innerHTML = "";
-  document.getElementById('percent_score').innerHTML = "";
+  document.getElementById('instructions').style.display = "block";
   number_correct = 0;
   answer_array = new Array(100).fill(false);
   var i, elementType, questions
@@ -1178,6 +1154,7 @@ function advanceTest(testName, formid, questid, answered) {
 }
 
 function end_test(testName, outOfTime) {
+  document.getElementById('instructions').style.display = "none";
   var i,j 
   if (outOfTime == true) {
     //So you ran out of time...
@@ -1200,11 +1177,11 @@ function end_test(testName, outOfTime) {
   }
   var msg1 = "Great Job you got a total of " + number_correct.toString() + " questions correct!";
   var msg2 = "That Comes out to a percent of " + percent.toString() + "&#37;";
-  var tblmsg = " This is a table breackdown of your score. <br> <font color='#C0392B'>X</font>are incorrect and <font color='#52BE80'>:)</font> are correct answers.";
-  document.getElementById('raw_score').innerHTML = msg1;
-  document.getElementById('percent_score').innerHTML = msg2;
+  var tblmsg = " This is a table breackdown of your score. <br> <font color='#C0392B'>X </font>are incorrect, <font color='#52BE80'>:)</font> are correct answers, and blanks are questions that were not inclueded in this test.";
+  document.getElementById('raw_score').innerHTML = msg1 + '<br>' + msg2;
   document.getElementById('tabel_score').innerHTML = tblmsg;
-  generate_table();
+  document.getElementById('tabel_score').style.fontSize = "smaller" ;
+  generate_table(testName);
   document.getElementById('timer').style.display = "none";
 
 }
@@ -1221,14 +1198,15 @@ function getPairValues(testName) {
   }
 }
 
-function generate_table() {
+function generate_table(testName) {
   // get the reference for the body
   var body = document.getElementsByTagName("body")[0];
   // creates a <table> element and a <tbody> element
   var tbl = document.createElement("table");
   var tblBody = document.createElement("tbody");
   // creating all cells
-  var index = 20
+  var index = 20;
+  var ignore = 0;
   for (var i = 1; i < 10; i++) {
     // creates a table row
     var row = document.createElement("tr");
@@ -1246,11 +1224,18 @@ function generate_table() {
       // node the contents of the <td>, and put the <td> at
       // the end of the table row
       var cell = document.createElement("td");
+      
       if (i == 1) {
         var cellText = document.createTextNode(j.toString());
       }
       else {
-        if (answer_array[index] == true) {
+        if (ignore_check(testName, ignore) == index) {
+          //then we want to ignote this value since it is not on this test 
+          var cellText = document.createTextNode(" ");
+          ignore += 1;
+        }
+        else {
+          if (answer_array[index] == true) {
           //If true we got it right so we put a checkmark
           cell.setAttribute('style', 'color:#52BE80');
           var cellText = document.createTextNode(":)");
@@ -1259,7 +1244,8 @@ function generate_table() {
           cell.setAttribute('style', 'color:#C0392B');
           var cellText = document.createTextNode('X');
         }
-      index += 1
+        }
+        index += 1
       }
       cell.appendChild(cellText);
       row.appendChild(cell);
@@ -1273,6 +1259,13 @@ function generate_table() {
   body.appendChild(tbl);
   // sets the border attribute of tbl to 2;
   //tbl.setAttribute("class", "'tb01'");
+}
+
+function ignore_check(testName, index) {
+  if (testName == "testmult") {
+    var i = ignore_array_mult[index];
+    return i
+  }
 }
 
 function startTimer(testName) {
