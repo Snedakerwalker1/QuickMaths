@@ -72,33 +72,8 @@ var question_order = []
 var number_correct = 0
 var value = 0
 
-/function openPage(pageName,elmnt,color) {
-  var result = true
-  if (in_test == true) {
-    result = confirm("Are you sure you want to exit test, your progress will be lost?")
-    clearTimeout(timer_active);
-    number_correct = 0
-  }
-  if (result == true) {
-    in_test = false
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablink");
-    for (i = 0; i < tablinks.length; i++) {
-      if (tablinks[i].style.display == "none") {
-        tablinks[i].style.display = "block";
-      }
-      tablinks[i].style.backgroundColor = "";
-    }
-    document.getElementById(pageName).style.display = "block";
-    elmnt.style.backgroundColor = color;
-  }
-}/
 function hideTab(element){
-  dogument.getElementById(element).style.display = "none"
+  document.getElementById(element).style.display = "none"
 }
 function testOpenPage(pageName) {
   var i, tabcontent, tablinks;

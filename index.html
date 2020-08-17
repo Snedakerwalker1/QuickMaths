@@ -17,7 +17,7 @@
   } </STYLE>
 
 <button class="tablink" onclick="openPage('QuickMaths', this, '#EBF5FB')" id="defaultOpen">QuickMaths Home</button>
-<button class="tablink" onclick="openPage('Guest', this, '#EAFAF1')" >Guest</button>
+<button class="tablink" onclick="openPage('Practice', this, '#EAFAF1')" >Practice</button>
 <button class="tablink" onclick="openPage('Sign', this, '#FDEDEC')">Sign Up</button>
 <button class="tablink" onclick="openPage('Log', this, '#FBEEE6')">Log In</button>
 
@@ -41,13 +41,16 @@
   Give any of these built in tests a whirl right now by clicking here. 
   </p>
   <div class="wrapper">
-    <button class="button button1" onclick="openPage('Guest', this, '#EAFAF1')" >Try Tests</button>
+    <button class="button button1" onclick="openPage('Practice', this, '#EAFAF1')" >Try Tests</button>
   </div>
+
+  <!-- Here I will put another set of tabs, at the bottom, that go to "About Us", "Privacy Policy" and "Contact Us" each will be their own new html page with the neccesary stuff.-->
+
 </div>
 
-<div id="Guest" class="tabcontent">
+<div id="Practice" class="tabcontent">
   <h3>Try Our Tests!</h3>
-  <p>Hello Guest. Feel free to try any, or even all of the test material below. Just click on the test of your choice, input the amount of time limit you want, and try one of our tests, and don't forget to have fun!
+  <p>Feel free to try any, or even all of the test material below. Just click on the test of your choice, input the amount of time limit you want, and try one of our tests, and don't forget to have fun!
   </p>
   <p style="text-align:center;">
     Just chose a test below and begin!
@@ -120,7 +123,7 @@ function openPage(pageName,elmnt,color) {
   }
 }
 function hideTab(element){
-  dogument.getElementById(element).style.display = "none"
+  document.getElementById(element).style.display = "none"
 }
 function testOpenPage(pageName) {
   var i, tabcontent, tablinks;
