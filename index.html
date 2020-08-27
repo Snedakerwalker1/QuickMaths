@@ -151,7 +151,7 @@ function submit_time(formid, testName, inputid1, inputid2, hasTime) {
   array.pop();
   var first = array.shift();
   array.shift();
-  if (first == "html:") { 
+  if (first == "https:") { 
     array.shift();
   }
   while (array.length > 0) {
@@ -174,7 +174,7 @@ function submit_time(formid, testName, inputid1, inputid2, hasTime) {
     in_test = true;
     resetForms();
   }
-  window.location.href = url;
+  window.location.assign(url);
 }
 
 function resetForms() {
