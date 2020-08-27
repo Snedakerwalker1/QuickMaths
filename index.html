@@ -53,24 +53,23 @@
   <p>Feel free to try any, or even all of the test material below. Just click on the test of your choice, input the amount of time limit you want, and try one of our tests, and don't forget to have fun!
   </p>
   <p style="text-align:center;">
-    Just chose a test below and begin!
+    Just chose a test and time limit below and it will take you to a Practice Test!
   </p>
   <div class="wrapper">
-    <a class="button button1" href="Multiplication_0_9.html"> Multiplication 0-9 test</a>
-    <!--<button class="button button1" onclick="testOpenPage('test1')"></button> -->
-    <bl/>
-    <p>This is the Multiplication 0-9 test.
-    </p>
-    <bl/>
-    <a class="button button1" href="Division_0_9.html" style="width: 100%;"> Division 0-9 test</a>
-    <bl/>
-    <p>This is the Division 1-9 test.
-    </p>
-    <bl/>
-    <button class="button button1">Multiplication and Division 0-9 test</button>
-    <bl/>
-    <p>This is the Multiplication and Division 0-9 test.
-    </p>
+    <form name="testForm" id="testForm" onsubmit="event.preventDefault(); submit_time('testForm', 'tests','time1', 'time2', true);">
+      <label for="tests">Choose a Test:</label>
+        <select name="tests" id="tests">
+          <option value="Multiplication_0_9.html">Multiplication 0-9 test</option>
+          <option value="Division_0_9.html">Division 0-9 test</option>
+        </select>
+        <br><br>
+
+      Time Limit: <input type="number" min="0" max="30" step="1" id="time1" name="min" value="3"> <input type="number" min="0" max="60" step="1" id="time2" name="sec" value="30">  <br><br> 
+
+    </form> 
+    <button class="button2 button12" onclick="submit_time('testForm','tests','time1', 'time2',  false)"> No Time Limit </button>
+    <button class="button2 button12" onclick="submit_time('testForm', 'tests','time1', 'time2', true)"> Begin Test</button>
+  </div>
   </div>
 </div>
 
@@ -144,23 +143,35 @@ function testOpenPage(pageName) {
 
   document.getElementById(pageName).style.display = "block";
 }
-//this will set the time period in minutes to the 
-function submit_time(testName, formid, inputid, hasTime) {
-  //This function will start the timer with the specific time submited, no timer if neccesary and start the test function. 
-  var time
+function submit_time(formid, testName, inputid1, inputid2, hasTime) {
+  //This function will get the timer info, and will open the test file selected with the specefide timer stuff. 
+  var timemin, timesec
+  var url = ""
+  var array = window.location.href.split('/');
+  array.pop();
+  array.shift();
+  array.shift();
+  while (array.length > 0) {
+    url = url + '/' + array.shift();
+  }
+  url = url + '/';
+  var name = document.getElementById(formid).elements[testName].value;
+  url = url + name;
   if (hasTime == true) {
-    time = document.getElementById(formid).elements[inputid].value;
-    document.getElementById('timer').style.display = "block";
-    document.getElementById('timer').innerHTML =  time + ":" + 05;
-    startTimer(testName);
+    timemin = document.getElementById(formid).elements[inputid1].value;
+    timesec = document.getElementById(formid).elements[inputid2].value;
+    url = url + '?' + hasTime + '/' + timemin + '/'+ timesec; 
+    in_test = true;
+    resetForms();
   }
   else {
-    document.getElementById('timer').style.display = "none";
+    timemin = 0;
+    timesec = 0;
+    url = url + '?' + hasTime + '/' + timemin + '/'+ timesec; 
+    in_test = true;
+    resetForms();
   }
-  in_test = true;
-  testOpenPage(testName);
-  beginTest(testName);
-  resetForms();
+  window.location.href = url;
 }
 
 function resetForms() {

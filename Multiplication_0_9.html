@@ -21,19 +21,22 @@
   <div class="wrapper">
     <h3>Multiplication 0-9 Test</h3>
   </div>
-  <p>To begin the test first input how much time, in minutes, you want to give yourself for the test, or click the no time limit button. 
-    The standard amount of time in person would be 3 minutes, but feel free to pick any time! </p>
+
+  <p class='results' id="test_info">You're about to take the Multiplion 0-9 test.</p>
+
+  <p class='results' id='timer_info'></p>
+
+
+  <p class='results' id='info'> To start the test just click the 'Begin Test' button below</p>
+
   <div class="wrapper">
-    <form name="testTimeForm" id="testTimeForm" onsubmit="event.preventDefault(); submit_time('testmult', 'testTimeForm', 'time1', true);">
-      Time Limit: <input type="number" min="1" max="30" step="1" name="time1" value="3"><br><br> 
-    </form> 
-    <button class="button2 button12" onclick="submit_time('testmult', 'testTimeForm','time1', false)"> No Time Limit </button>
-    <button class="button2 button12" onclick="submit_time('testmult','testTimeForm', 'time1', true)"> Begin Test</button>
+    <button class="button2 button12" onclick="submit_time('testmult', 'testTimeForm')"> Begin Test </button>
   </div>
 </div>
 <!-- Once the time is filled out in the start page, the test page here will be activated. -->
 <div id="testmult" class="tabcontent">
   <h3>Multiplication 0-9 Test</h3>
+  
   <p id="instructions"> Enter your answer in the space privided and press enter. If you dont know the answer press Skip.
   </p>
 
@@ -1037,6 +1040,9 @@ var answer_array = new Array(100).fill(false);
 var number_correct = 0;
 var value = 0;
 var ignore_array_mult = [20,30,40,51,60,61,70,80,81,90];
+var timeMin = 3;
+var timeSec = 30;
+var hasTime = true;
 
 function hideTab(element){
   document.getElementById(element).style.display = "none"
@@ -1057,17 +1063,29 @@ function testOpenPage(pageName) {
   for (i=0;i < testContent.length; i++) {
     testContent[i].style.display = "none";
   }
-
+  //here we will read the hiden variables from the thiny to do the thingy. 
+  var array = window.location.href.split('?');
+  var variables = array.pop();
+  array2 = variables.split('/');
+  hasTime = (array2.shift() == 'true');
+  timeMin = array2.shift();
+  timeSec = array2.shift();
+  var msg;
+  if (hasTime == true) {
+    msg = "You will have a time limit of " + timeMin + ":" + timeSec + ".";
+  }
+  else {
+    msg = "You will have no time limit.";
+  }
+  document.getElementById('timer_info').innerHTML = msg;
   document.getElementById(pageName).style.display = "block";
 }
 //this will set the time period in minutes to the 
-function submit_time(testName, formid, inputid, hasTime) {
+function submit_time(testName, formid) {
   //This function will start the timer with the specific time submited, no timer if neccesary and start the test function. 
-  var time
   if (hasTime == true) {
-    time = document.getElementById(formid).elements[inputid].value;
     document.getElementById('timer').style.display = "block";
-    document.getElementById('timer').innerHTML =  time + ":" + 05;
+    document.getElementById('timer').innerHTML =  timeMin + ":" + timeSec;
     startTimer(testName);
   }
   else {
@@ -1103,8 +1121,6 @@ function beginTest(testName) {
   }
   shuffle(question_order);
   question_order[0].style.display = 'block';
-
-
 }
 
 function shuffle(array) {
@@ -1176,7 +1192,7 @@ function end_test(testName, outOfTime) {
     percent = 0;
   }
   var msg1 = "Great Job you got a total of " + number_correct.toString() + " questions correct!";
-  var msg2 = "That Comes out to a percent of " + percent.toString() + "&#37;";
+  var msg2 = "That Comes out to " + percent.toString() + "&#37;";
   var tblmsg = " This is a table breackdown of your score. <br> <font color='#C0392B'>X </font>are incorrect, <font color='#52BE80'>:)</font> are correct answers, and blanks are questions that were not inclueded in this test.";
   document.getElementById('raw_score').innerHTML = msg1 + '<br>' + msg2;
   document.getElementById('tabel_score').innerHTML = tblmsg;
@@ -1189,6 +1205,9 @@ function end_test(testName, outOfTime) {
 function getNumTestAnswers(testName) {
   if (testName == "testmult") {
     return 'multiplication';
+  }
+  if (testName == "testdiv") {
+    return 'division';
   }
 }
 
