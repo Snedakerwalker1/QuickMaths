@@ -149,8 +149,11 @@ function submit_time(formid, testName, inputid1, inputid2, hasTime) {
   var url = ""
   var array = window.location.href.split('/');
   array.pop();
+  var first = array.shift();
   array.shift();
-  array.shift();
+  if (first == "html:") { 
+    array.shift();
+  }
   while (array.length > 0) {
     url = url + '/' + array.shift();
   }
