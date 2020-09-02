@@ -188,7 +188,7 @@ function submit_time(formid, testName, inputid1, inputid2, hasTime) {
   }
   url = url + '/';
   var name = document.getElementById(formid).elements[testName].value;
-  url = url + name;
+  url = name;
   if (hasTime == true) {
     timemin = document.getElementById(formid).elements[inputid1].value;
     timesec = document.getElementById(formid).elements[inputid2].value;
@@ -203,7 +203,7 @@ function submit_time(formid, testName, inputid1, inputid2, hasTime) {
     in_test = true;
     resetForms();
   }
-  window.location.assign(url);
+  location.href = url;
 }
 
 function resetForms() {
