@@ -33,10 +33,14 @@
 </div>
 <!-- Once the time is filled out in the start page, the test page here will be activated. -->
 <div id="testdiv" class="tabcontent">
+  <div class="padded">
+    <div class="wrapper">
   <h3>Division 0-9 Test</h3>
+</div>
 
   <p id="instructions"> Enter your answer in the space privided and press enter. If you dont know the answer press Skip.
   </p>
+  </div>
   <!-- advanceTest(testName, formid, questid, answered = bool if the user skipped the question.) -->
   <div id="div_0" class="division">  
     <div>    
@@ -62,8 +66,9 @@
 
   <p class='results' id='tabel_score'></p>
 
-  
+  <div class = "padded">
   <div id="timer" class="countdownTimer">Time left = <span id="timer"></span></div>
+  </div>
 
 </div>
 <script>

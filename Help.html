@@ -11,106 +11,50 @@
 </head>
 <body>
 
-<STYLE>A {text-decoration: 
-    none; 
-    width: 40%;  
-} </STYLE>
+<STYLE>A {text-decoration: none;
+          width: 40%;
 
-<button class="tablink" onclick="openPage('QuickMaths', this, '#EBF5FB')" id="defaultOpen">QuickMaths Home</button>
-<button class="tablink" onclick="openPage('Practice', this, '#EAFAF1')" >Practice</button>
-<button class="tablink" onclick="openPage('Test', this, '#FDEDEC')">Test</button>
-<button class="tablink" onclick="openPage('Log', this, '#FBEEE6')" >Log In/Sign Up</button>
-<!--<buttun class="tablink" onclick="openPage('Teacher', this, '#FBEEE6')" id="defaultHide">Teacher/Log OUt </button> -->
+  } </STYLE>
 
-<div id="QuickMaths" class="tabcontent">
+<button class="tablink" onclick="returnInterupt()" >QuickMaths Home</button>
+<button class="tablink" onclick="openPage('Info', this, '#EAFAF1')" id="defaultOpen">Help</button>
+<button class="tablink" onclick="openPage('Contact', this, '#FDEDEC')">Contact Us</button>
+<button class="tablink" onclick="openPage('Privacy', this, '#FBEEE6')">Privacy Polocy</button>
 
+
+<div id="Info" class="tabcontent">
   <div class='padded'>
-  <h3>Info</h3>
-  <p>Welcome to QuickMaths the home of online mathematics Practice and Testing.
-  <br> QuickMaths is a digital classroom tool designed for both teachers and students to help the students master their multiplication and division facts, while giving teachers a powerfull timed testing method, and giving both teachers and students in depth student results. 
-  </p>
-  <p>
-  QuickMaths all began in the fall of 2020 when the California Elementary School Teacher Mrs. Quick wanted a way to continue giving her 70 question timed Multiplication and Division facts test to her 5th grade students, but couldn’t find a suitable online method to give out said test. And so, with her input, Quickmaths was created to fill this need for an online, timed test service as well as a practice service for students. 
-  </p>
-  <!--
-  <p>
-  QuickMaths provides all of its current features free of charge as a hope to give students acces to 
-  </p>
-  -->
-  <p>
-  As of now, QuickMaths has 3 different built in multiplication and division testing options: the Multiplication 0-9s Test, Division 1-9s test, and the combined Multiplication and Division 0-9s test.
-  </p>
-  <p>
-  Give any of these built in tests a whirl right now by clicking here. 
-  </p>
-  <div class="wrapper">
-    <button class="button button1" onclick="openPage('Practice', this, '#EAFAF1')" >Try Tests</button>
-  </div>
-  <p>
-  If you need any help, want to contact us, or want to see the Privacy Policy click the button below. 
-  </p>
-  <div class="wrapper">
-    <a href="Help.html" class="button button1"> Extra Info</a>
-  </div>
-  <!-- Here I will put another set of tabs, at the bottom, that go to "About Us", "Privacy Policy" and "Contact Us" each will be their own new html page with the neccesary stuff.-->
-</div>
-
-</div>
-
-<div id="Practice" class="tabcontent">
-
-<div class='padded'>
-  <h3>Try Our Tests!</h3>
-  <p>Feel free to try any, or even all of the test material below. Just click on the test of your choice, input the amount of time limit you want, and try one of our tests, and don't forget to have fun!
-  </p>
-  <p style="text-align:center;">
-    Just chose a test and time limit below and it will take you to a Practice Test!
-  </p>
-  <div class="wrapper">
-    <form name="testForm" id="testForm" onsubmit="event.preventDefault(); submit_time('testForm', 'tests','time1', 'time2', true);">
-      <label for="tests">Choose a Test:</label>
-        <select name="tests" id="tests">
-          <option value="Multiplication_0_9.html">Multiplication 0-9 test</option>
-          <option value="Division_0_9.html">Division 0-9 test</option>
-        </select>
-        <br><br>
-      Time Limit: <input type="number" min="0" max="30" step="1" id="time1" name="min" value="3"> <input type="number" min="0" max="60" step="1" id="time2" name="sec" value="30">  <br><br> 
-    </form> 
-    <button class="button2 button12" onclick="submit_time('testForm','tests','time1', 'time2',  false)"> No Time Limit </button>
-    <button class="button2 button12" onclick="submit_time('testForm', 'tests','time1', 'time2', true)"> Begin Test</button>
-  </div>
+    <h3>Help</h3>
+    <p> We are here to help at QuickMaths, so below we have in depth descriptions and instructions on how to use any of the servecies we provide, for both teachers and students. 
+    </p>
+    <h3> Practice </h3>
+    <p> Any person can take any practice test that we offer for free. All you have to do is chose the test you want to take and a time limit if you wish to give yourself one and click begin test or No time limit. This will bring you to the test you chose and will only begin once you decide you are ready, by clicking the begin test button. You will then input the answers to the problems givin in the box provided, optionaly skipping questions to come back to later if you so chose. The Practice test will end either when you finish all of the questions or run out of time. The system will then give you your score and a breackdown of what questions you got correctley. 
+    </p>
+    <h3> Test </h3>
+    <p> The test tab is for students to take a specific tests with a specific time that has been assigned by the teacher. All the student needs to do is input the code given to them by there teacher and input a "Nickname" of there choosing to take the test. The student will then take the test just like in the practice tab. Once the student finishes the test they will get the same in depth score as in the practice tab, and the score will be automaticaly sent to the teacher aswell. 
+    </p>
+    <h3> Log In/Sign Up </h3> 
+    <p> This tab is for teacher to log in and sign up. Once logged in/ or signed up the teachers will have acces to the Teacher tools, like assigning new test and viewing scores.
+    </p>
   </div>
 </div>
-</div>
 
-<div id="Test" class="tabcontent">
-
-<div class='padded'>
-  <h3>Tests:</h3>
-  <p> To take a test assigned by a teacher just input the test code given to you by your teacher and a Nickname for yourself and click the begin button. <br>
-    Note: Please check with your teacher about what a good Nickname should be. 
-  </p>
-  <div class="wrapper">
-    <form name="timedTest" id="timedTest" >
-      Test Code: <input type="text" maxlength="6" id="Test_Code" name="Test_Code">
-      <br><br>
-      Nickname: <input type="text" maxlength="30" id="Nickname" name="Nickname" >
-    </form>
+<div id="Contact" class="tabcontent">
+  <div class='padded'>
+    <h3>Contact Us</h3>
+    <p> If you need to contact us for any reason please do. 
+      <br>
+      You can contact us by: <br>
+      Emailing: wsnedaker@berkeley.edu
+    </p>
   </div>
 </div>
-</div>
 
-<div id="Log" class="tabcontent">
-
-<div class='padded'>
-  <h3>Log In/Sign Up</h3>
-  <p> Hi there, if your a student you are in the wrong place. Please click on the Test tab if your teacher sent you here to take a test, or the Practice tab if you came here to practice on your own. </p>
-  <p>I will put the sign up/ log in buttons here. </p>
-</div>
-</div>
-
-<div id="Teacher" class="tabcontent">
-  <h3>Teacher/Log Out</h3>
+<div id="Privacy" class="tabcontent">
+  <div class='padded'>
+    <h3>Privacy Polocy.</h3>
+    <p>I will have a privacy polocy here in the next couple of days. </p>
+  </div>
 </div>
 
 <script>
@@ -136,15 +80,10 @@ function openPage(pageName,elmnt,color) {
     }
     tablinks = document.getElementsByClassName("tablink");
     for (i = 0; i < tablinks.length; i++) {
-      //if (tablinks[i] == document.getElementById('defaultHide')) {
-      //  tablinks[i].style.display = "none";
-      //}
-      //else 
       if (tablinks[i].style.display == "none") {
         tablinks[i].style.display = "block";
       }
       tablinks[i].style.backgroundColor = "";
-      //document.getElementById("defaultHide").style.display = "none";
     }
     document.getElementById(pageName).style.display = "block";
     elmnt.style.backgroundColor = color;
@@ -204,6 +143,25 @@ function submit_time(formid, testName, inputid1, inputid2, hasTime) {
     resetForms();
   }
   window.location.assign(url);
+}
+function returnInterupt() {
+  var result = true
+  if (in_test == true) {
+    result = confirm("Are you sure you want to exit the test, your progress will be lost?");
+    if (result==true) {
+      clearTimeout(timer_active);
+      number_correct = 0;
+      answer_array = new Array(100).fill(false);
+      location.href = "index.html";
+    }
+    else {
+      return false;
+    }
+  }
+  else {
+    location.href = "index.html";
+  }
+
 }
 
 function resetForms() {

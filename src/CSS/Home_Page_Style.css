@@ -42,12 +42,16 @@ body, html {
 }
 
 #QuickMaths {background-color: #EBF5FB;}
-#Guest {background-color: #EAFAF1;}
-#Sign {background-color: #FDEDEC;}
+#Practice {background-color: #EAFAF1;}
+#Test {background-color: #FDEDEC;}
 #Log {background-color: #FBEEE6;}
-#test1 {background-color: #D5DBDB}
-#test1Page {background-color: #D5DBDB}
-
+#test1 {background-color: #FEF5E7;}
+#test1Page {background-color: #D5DBDB;}
+#Info {background-color: #EAFAF1;} 
+#Contact {background-color: #FDEDEC;}
+#Privacy {background-color: #FBEEE6;}
+#testmult {background-color: #FEF9E7;}
+#testdiv {background-color: #FEF9E7;}
 
 .button {
   border: 2px solid black;
@@ -92,8 +96,15 @@ body, html {
 }
 
 .wrapper {
-    text-align: center;
+  text-align: center;
 }
+
+.padded {
+  text-align: left;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
 .countdownTimer{
   background-color:#F1C40F;
   color:#17202A;
